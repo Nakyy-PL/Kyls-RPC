@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "kyls_client_rpc",
+  "version": "1.0.1",
+  "name": "Kyls Client RPC",
+  "description": "Automatic Discord Rich Presence for Kyls Client: Main Menu, Server Browser, Multiplayer, and Singleplayer.",
+  "authors": ["NakyyTzy"],
+  "license": "MIT",
+  "icon": "assets/kyls_client_rpc/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["dev.kyls.rpc.KylsRpcMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "minecraft": ">=26.1",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}

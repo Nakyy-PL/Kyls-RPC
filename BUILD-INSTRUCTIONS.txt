@@ -1,0 +1,29 @@
+KYLS CLIENT RPC 1.0.1 - full project for Minecraft 26.x (Fabric, Mojang names)
+
+This project already includes build.gradle, the Gradle wrapper and versions from
+the official Fabric example mod: Minecraft 26.3, Fabric Loader 0.20.1,
+Fabric API 0.166.2+26.3. No template generator needed.
+
+BUILD LOCALLY
+1. Install JDK 25 (required for 26.x).
+2. Extract the zip and open a terminal inside the folder.
+3. Run:
+     Windows  : double-click BUILD.bat   (or: gradlew.bat build)
+     Mac/Linux: ./gradlew build
+   The first build downloads Minecraft and dependencies, so it needs internet
+   and takes a while.
+4. The jar is in build/libs/kyls-client-rpc-1.0.1.jar
+   (not the -sources one). Put it in your mods folder together with Fabric API.
+
+BUILD ON GITHUB (nothing to install)
+1. Create a repo and upload everything in this folder, including the .github folder.
+2. Open the Actions tab. The build runs automatically on every push.
+3. When it is green, open the run and download the "Artifacts" file.
+
+CHANGE MINECRAFT VERSION
+Edit gradle.properties (minecraft_version, loader_version, fabric_api_version).
+Latest numbers: https://fabricmc.net/develop
+
+IF THE BUILD FAILS
+Most likely the problem is in read() in RpcManager.java, the only part that
+touches Minecraft classes. Send the error message to Claude to get it fixed.
