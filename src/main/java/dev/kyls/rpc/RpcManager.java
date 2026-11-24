@@ -53,7 +53,7 @@ public class RpcManager {
             int online = conn != null ? conn.getOnlinePlayers().size() : 0;
             return new Snap(Mode.MULTI, address, online);
         }
-        Screen s = mc.screen;
+        Screen s = mc.gui.screen();
         if (s instanceof JoinMultiplayerScreen) {
             return new Snap(Mode.BROWSER, "", 0);
         }
